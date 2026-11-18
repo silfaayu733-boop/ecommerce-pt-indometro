@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="stoneDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#64748b"/>
+      <stop offset="50%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="stoneLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="50%" stop-color="#64748b"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <filter id="stoneShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="12" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="500" height="500" rx="20" fill="url(#bgGrad)"/>
+  <ellipse cx="250" cy="430" rx="190" ry="25" fill="#64748b" opacity="0.35" filter="blur(8px)"/>
+
+  <!-- Pile of Natural River Split Stones (Batu Kali Belah) -->
+  <g filter="url(#stoneShadow)">
+    <!-- Base Large Foundation Boulder Left -->
+    <path d="M 80 340 L 140 250 L 220 280 L 240 380 L 120 400 Z" fill="url(#stoneDark)" stroke="#1e293b" stroke-width="2"/>
+    <path d="M 140 250 L 220 280 L 190 350 L 100 360 Z" fill="url(#stoneLight)" opacity="0.7"/>
+
+    <!-- Base Large Boulder Right -->
+    <path d="M 260 270 L 370 240 L 430 330 L 390 410 L 250 390 Z" fill="url(#stoneDark)" stroke="#1e293b" stroke-width="2"/>
+    <path d="M 260 270 L 370 240 L 350 340 L 250 340 Z" fill="url(#stoneLight)" opacity="0.6"/>
+
+    <!-- Center Giant Split Stone (Faceted Angular Fractures) -->
+    <path d="M 170 220 L 270 170 L 330 240 L 310 360 L 180 370 Z" fill="url(#stoneLight)" stroke="#0f172a" stroke-width="2.5"/>
+    <!-- Cleavage Planes / Facets of Split Rock -->
+    <path d="M 170 220 L 240 250 L 270 170 Z" fill="#94a3b8"/>
+    <path d="M 240 250 L 310 360 L 180 370 Z" fill="url(#stoneDark)"/>
+    <path d="M 240 250 L 330 240 L 310 360 Z" fill="#475569"/>
+
+    <!-- Top Keystone Rock -->
+    <path d="M 210 170 L 280 140 L 320 180 L 270 220 Z" fill="url(#stoneDark)" stroke="#0f172a" stroke-width="2"/>
+    <path d="M 210 170 L 280 140 L 260 200 Z" fill="#cbd5e1" opacity="0.8"/>
+
+    <!-- Foreground Mid-size Rocks -->
+    <path d="M 130 370 L 190 340 L 240 390 L 160 420 Z" fill="url(#stoneLight)" stroke="#1e293b" stroke-width="1.5"/>
+    <path d="M 260 370 L 330 340 L 360 400 L 280 415 Z" fill="url(#stoneDark)" stroke="#1e293b" stroke-width="1.5"/>
+
+    <!-- Quartz Vein / Mineral Streak -->
+    <path d="M 190 230 L 220 280 L 200 350" stroke="#f1f5f9" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+  </g>
+
+  <!-- Top Spec Ribbon -->
+  <rect x="25" y="25" width="240" height="34" rx="8" fill="#1e293b"/>
+  <text x="145" y="47" font-family="'Arial', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">BATU BELAH KALI PONDASI</text>
+
+  <!-- Quality Stamp -->
+  <g transform="translate(425, 70)">
+    <circle cx="0" cy="0" r="32" fill="#0f172a" stroke="#ffffff" stroke-width="2"/>
+    <text x="0" y="-8" font-family="'Arial Black', sans-serif" font-size="8" font-weight="900" fill="#ffffff" text-anchor="middle">BATU KALI</text>
+    <text x="0" y="7" font-family="'Arial Black', sans-serif" font-size="12" font-weight="900" fill="#facc15" text-anchor="middle">HITAM</text>
+    <text x="0" y="18" font-family="'Arial', sans-serif" font-size="7" font-weight="bold" fill="#38bdf8" text-anchor="middle">PADAT KERAS</text>
+  </g>
+
+  <!-- Bottom Info -->
+  <rect x="120" y="450" width="260" height="24" rx="12" fill="#334155"/>
+  <text x="250" y="466" font-family="'Arial', sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">KHUSUS PONDASI RUMAH &amp; BENTENG TALUD</text>
+</svg>

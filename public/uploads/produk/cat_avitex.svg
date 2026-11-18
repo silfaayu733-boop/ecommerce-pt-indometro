@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="pailBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f1f5f9"/>
+      <stop offset="25%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <linearGradient id="avitexGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+    <linearGradient id="lidGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#15803d"/>
+      <stop offset="50%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+    <linearGradient id="goldBadge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#facc15"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" rx="20" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle circular spotlight -->
+  <circle cx="250" cy="260" r="170" fill="#ffffff" opacity="0.6"/>
+
+  <!-- Ground Shadow -->
+  <ellipse cx="250" cy="425" rx="145" ry="25" fill="#94a3b8" opacity="0.4" filter="blur(6px)"/>
+
+  <!-- Bucket / Pail Container -->
+  <g filter="url(#dropShadow)">
+    <!-- Main Pail Body (Tapered Cylinder) -->
+    <path d="M 140 160 L 160 395 Q 162 410 250 410 Q 338 410 340 395 L 360 160 Z" fill="url(#pailBody)"/>
+
+    <!-- Pail Base Rim -->
+    <ellipse cx="250" cy="395" rx="90" ry="14" fill="#cbd5e1"/>
+
+    <!-- Handle Ear Pivot Left & Right -->
+    <rect x="132" y="180" width="12" height="20" rx="3" fill="#64748b"/>
+    <rect x="356" y="180" width="12" height="20" rx="3" fill="#64748b"/>
+    <!-- Metal Handle Arc -->
+    <path d="M 138 185 C 138 90, 362 90, 362 185" fill="none" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+    <rect x="220" y="93" width="60" height="12" rx="4" fill="#15803d"/>
+
+    <!-- Pail Upper Collar & Rim -->
+    <ellipse cx="250" cy="160" rx="112" ry="22" fill="#e2e8f0"/>
+    <path d="M 136 150 L 138 165 Q 138 185 250 185 Q 362 185 362 165 L 364 150 Z" fill="#22c55e"/>
+
+    <!-- Green Lid -->
+    <ellipse cx="250" cy="148" rx="114" ry="20" fill="url(#lidGrad)"/>
+    <ellipse cx="250" cy="144" rx="100" ry="15" fill="#16a34a"/>
+    <ellipse cx="250" cy="142" rx="85" ry="11" fill="#22c55e"/>
+
+    <!-- Brand Label Background Area -->
+    <path d="M 148 205 L 157 370 Q 250 382 343 370 L 352 205 Q 250 215 148 205 Z" fill="#ffffff"/>
+
+    <!-- Top Label Green Curved Banner -->
+    <path d="M 148 205 L 150 245 Q 250 260 350 245 L 352 205 Q 250 215 148 205 Z" fill="url(#avitexGreen)"/>
+    
+    <!-- Avian Bird Logo / Icon -->
+    <circle cx="250" cy="225" r="14" fill="#ffffff"/>
+    <path d="M 244 227 Q 250 217 256 222 Q 251 224 254 229 Q 248 228 244 227 Z" fill="#15803d"/>
+
+    <!-- AVITEX Brand Text -->
+    <text x="250" y="295" font-family="'Arial Black', Impact, sans-serif" font-size="44" font-weight="900" fill="#15803d" text-anchor="middle" letter-spacing="1">AVITEX</text>
+    
+    <!-- Subtitle Text -->
+    <text x="250" y="316" font-family="'Arial', sans-serif" font-size="12" font-weight="bold" fill="#047857" text-anchor="middle" letter-spacing="2">CAT TEMBOK INTERIOR</text>
+    <text x="250" y="332" font-family="'Arial', sans-serif" font-size="10" font-weight="bold" fill="#64748b" text-anchor="middle">SUPER WHITE &#8226; DAYA TUTUP TERBAIK</text>
+
+    <!-- Color Chip / Super White Indicator -->
+    <rect x="200" y="342" width="100" height="18" rx="9" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+    <circle cx="212" cy="351" r="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+    <text x="255" y="355" font-family="'Arial', sans-serif" font-size="9" font-weight="bold" fill="#334155" text-anchor="middle">PUTIH SALJU</text>
+
+    <!-- 5 KG Badge -->
+    <g transform="translate(305, 310)">
+      <circle cx="0" cy="0" r="22" fill="url(#goldBadge)" stroke="#ffffff" stroke-width="2"/>
+      <text x="0" y="-3" font-family="'Arial Black', sans-serif" font-size="12" font-weight="bold" fill="#78350f" text-anchor="middle">5</text>
+      <text x="0" y="11" font-family="'Arial Black', sans-serif" font-size="10" font-weight="bold" fill="#78350f" text-anchor="middle">KG</text>
+    </g>
+
+    <!-- Indonesian Quality Ribbon -->
+    <rect x="185" y="372" width="130" height="16" rx="4" fill="#dc2626"/>
+    <text x="250" y="384" font-family="'Arial', sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">NO. 1 DI INDONESIA</text>
+  </g>
+
+  <!-- Spec Badge at Top -->
+  <rect x="25" y="25" width="180" height="34" rx="8" fill="#15803d"/>
+  <text x="115" y="47" font-family="'Arial', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">CAT TEMBOK 5 KG</text>
+</svg>

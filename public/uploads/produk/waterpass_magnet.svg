@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="levelYellow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="30%" stop-color="#eab308"/>
+      <stop offset="70%" stop-color="#ca8a04"/>
+      <stop offset="100%" stop-color="#a16207"/>
+    </linearGradient>
+    <linearGradient id="bubbleGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#84cc16"/>
+      <stop offset="50%" stop-color="#bef264"/>
+      <stop offset="100%" stop-color="#65a30d"/>
+    </linearGradient>
+    <linearGradient id="alumEdge" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+    <filter id="levelShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="14" stdDeviation="10" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" rx="20" fill="url(#bgGrad)"/>
+  <circle cx="250" cy="260" r="170" fill="#ffffff" opacity="0.6"/>
+  <ellipse cx="250" cy="425" rx="190" ry="20" fill="#94a3b8" opacity="0.35" filter="blur(6px)"/>
+
+  <!-- Waterpass Placed Diagonally (-15 deg) -->
+  <g filter="url(#levelShadow)" transform="rotate(-15 250 250)">
+    <!-- Aluminum Body Bar 60 cm -->
+    <!-- Milled Edge Base Strip (Bottom Magnet Strip) -->
+    <rect x="40" y="270" width="420" height="10" rx="2" fill="url(#alumEdge)"/>
+    <rect x="100" y="278" width="80" height="3" fill="#0f172a"/>
+    <rect x="320" y="278" width="80" height="3" fill="#0f172a"/>
+
+    <!-- Main Yellow Heavy-Duty Box Beam -->
+    <rect x="40" y="210" width="420" height="60" rx="4" fill="url(#levelYellow)" stroke="#854d0e" stroke-width="2"/>
+
+    <!-- Black Shock-Absorbing Rubber End Caps -->
+    <path d="M 40 205 L 60 205 L 60 275 L 40 275 Z" fill="#0f172a"/>
+    <circle cx="50" cy="240" r="4" fill="#cbd5e1"/>
+    
+    <path d="M 440 205 L 460 205 L 460 275 L 440 275 Z" fill="#0f172a"/>
+    <circle cx="450" cy="240" r="4" fill="#cbd5e1"/>
+
+    <!-- Hand Hole Opening with rubber bumper -->
+    <rect x="290" y="222" width="70" height="36" rx="18" fill="#f8fafc" stroke="#854d0e" stroke-width="2"/>
+    <rect x="293" y="225" width="64" height="30" rx="15" fill="#0f172a"/>
+
+    <!-- Ruler Tick Scale on Top Edge -->
+    <line x1="80" y1="210" x2="80" y2="218" stroke="#713f12" stroke-width="2"/>
+    <line x1="100" y1="210" x2="100" y2="215" stroke="#713f12" stroke-width="1"/>
+    <line x1="120" y1="210" x2="120" y2="218" stroke="#713f12" stroke-width="2"/>
+    <line x1="140" y1="210" x2="140" y2="215" stroke="#713f12" stroke-width="1"/>
+    <line x1="160" y1="210" x2="160" y2="218" stroke="#713f12" stroke-width="2"/>
+    <line x1="180" y1="210" x2="180" y2="215" stroke="#713f12" stroke-width="1"/>
+    <line x1="200" y1="210" x2="200" y2="218" stroke="#713f12" stroke-width="2"/>
+
+    <!-- Center Horizontal Spirit Bubble Tube (180 deg) -->
+    <rect x="215" y="225" width="65" height="30" rx="6" fill="#0f172a"/>
+    <rect x="220" y="230" width="55" height="20" rx="10" fill="url(#bubbleGreen)" stroke="#ffffff" stroke-width="1"/>
+    <!-- Center Air Bubble -->
+    <ellipse cx="247" cy="240" rx="7" ry="5" fill="#ffffff" opacity="0.9"/>
+    <!-- Marker rings -->
+    <line x1="238" y1="230" x2="238" y2="250" stroke="#000000" stroke-width="1.5"/>
+    <line x1="256" y1="230" x2="256" y2="250" stroke="#000000" stroke-width="1.5"/>
+
+    <!-- Vertical Spirit Bubble Tube on Left (90 deg) -->
+    <rect x="90" y="222" width="30" height="36" rx="6" fill="#0f172a"/>
+    <rect x="95" y="226" width="20" height="28" rx="8" fill="url(#bubbleGreen)" stroke="#ffffff" stroke-width="1"/>
+    <ellipse cx="105" cy="240" rx="5" ry="6" fill="#ffffff" opacity="0.9"/>
+    <line x1="95" y1="235" x2="115" y2="235" stroke="#000000" stroke-width="1"/>
+    <line x1="95" y1="245" x2="115" y2="245" stroke="#000000" stroke-width="1"/>
+
+    <!-- 45-Degree Spirit Bubble Tube on Right -->
+    <g transform="translate(395, 240) rotate(45)">
+      <rect x="-14" y="-18" width="28" height="36" rx="6" fill="#0f172a"/>
+      <rect x="-10" y="-14" width="20" height="28" rx="8" fill="url(#bubbleGreen)" stroke="#ffffff" stroke-width="1"/>
+      <ellipse cx="0" cy="0" rx="5" ry="6" fill="#ffffff" opacity="0.9"/>
+    </g>
+
+    <!-- Brand Typography & Specs -->
+    <text x="175" y="242" font-family="'Arial Black', Impact, sans-serif" font-size="14" font-weight="900" fill="#0f172a">TOTAL</text>
+    <text x="175" y="254" font-family="'Arial', sans-serif" font-size="8" font-weight="bold" fill="#713f12">MAGNETIC 60CM</text>
+
+    <!-- Top Gloss Sheen -->
+    <line x1="60" y1="213" x2="440" y2="213" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+  </g>
+
+  <!-- Top Spec Ribbon -->
+  <rect x="25" y="25" width="240" height="34" rx="8" fill="#ca8a04"/>
+  <text x="145" y="47" font-family="'Arial', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">WATERPASS MAGNET 60 CM</text>
+
+  <!-- Quality Stamp -->
+  <g transform="translate(425, 70)">
+    <circle cx="0" cy="0" r="32" fill="#0f172a" stroke="#ffffff" stroke-width="2"/>
+    <text x="0" y="-8" font-family="'Arial Black', sans-serif" font-size="8" font-weight="900" fill="#ffffff" text-anchor="middle">3 TABUNG</text>
+    <text x="0" y="7" font-family="'Arial Black', sans-serif" font-size="11" font-weight="900" fill="#facc15" text-anchor="middle">MAGNET</text>
+    <text x="0" y="18" font-family="'Arial', sans-serif" font-size="7" font-weight="bold" fill="#84cc16" text-anchor="middle">AKURASI TINGGI</text>
+  </g>
+
+  <!-- Bottom Info -->
+  <rect x="130" y="450" width="240" height="24" rx="12" fill="#1e293b"/>
+  <text x="250" y="466" font-family="'Arial', sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ALAT UKUR KELURUSAN &amp; KEMIRINGAN</text>
+</svg>

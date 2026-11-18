@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </radialGradient>
+    <radialGradient id="floorShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Galvalume Zinc Spangle Texture Gradients -->
+    <linearGradient id="galvalumeFace" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="30%" stop-color="#f8fafc"/>
+      <stop offset="70%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <linearGradient id="metalSheen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="50%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="500" fill="url(#bgGlow)"/>
+  <ellipse cx="250" cy="430" rx="180" ry="25" fill="url(#floorShadow)"/>
+
+  <!-- 3D C-Channel (Kanal C) Profile Stack -->
+  <g transform="translate(60, 110)">
+    <!-- Back Channel Profile -->
+    <path d="M 50,40 L 360,40 L 400,10 L 90,10 Z" fill="#94a3b8"/>
+    
+    <!-- Main 3D Kanal C Bar 1 -->
+    <g>
+      <!-- Top Flange -->
+      <polygon points="40,90 350,90 410,30 100,30" fill="url(#galvalumeFace)" stroke="#64748b" stroke-width="2"/>
+      <polygon points="38,88 48,88 108,28 98,28" fill="#f8fafc"/>
+      
+      <!-- Web Face (Sisi Badan Kanal C) -->
+      <polygon points="40,90 350,90 350,230 40,230" fill="url(#metalSheen)" stroke="#64748b" stroke-width="2"/>
+      
+      <!-- Stiffener Ribs on Web (Lekukan Penguat Kanal C) -->
+      <path d="M 50,150 L 340,150" stroke="#f8fafc" stroke-width="4" fill="none"/>
+      <path d="M 50,154 L 340,154" stroke="#475569" stroke-width="3" fill="none"/>
+
+      <path d="M 50,170 L 340,170" stroke="#f8fafc" stroke-width="4" fill="none"/>
+      <path d="M 50,174 L 340,174" stroke="#475569" stroke-width="3" fill="none"/>
+
+      <!-- Bottom Flange (Bibir Bawah) -->
+      <polygon points="40,230 350,230 410,170 100,170" fill="url(#galvalumeFace)" stroke="#64748b" stroke-width="2"/>
+      <polygon points="410,30 410,170 350,230 350,90" fill="#475569" stroke="#334155" stroke-width="2"/>
+    </g>
+
+    <!-- Industrial Laser Inkjet Stamp on Galvalume -->
+    <g transform="translate(60, 125)">
+      <text x="0" y="0" font-family="'Courier New', monospace" font-size="12" font-weight="900" fill="#0284c7" letter-spacing="1">
+        INDOMETRO KANAL C75x0.75mm TCT - AZ100 SNI 8399:2017
+      </text>
+    </g>
+
+    <!-- Cross Section Diagram of 'C' Shape on the Left -->
+    <g transform="translate(10, 60)">
+      <path d="M 28,10 L 2,10 L 2,150 L 28,150 L 28,140 L 12,140 L 12,20 L 28,20 Z" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2"/>
+      <text x="35" y="85" font-family="'Arial Black', sans-serif" font-size="28" font-weight="900" fill="#1e293b">C 75</text>
+    </g>
+  </g>
+
+  <!-- Product Spec Card Badge -->
+  <g transform="translate(250, 395)">
+    <rect x="-160" y="-30" width="320" height="56" rx="10" fill="#0f172a" stroke="#0284c7" stroke-width="3"/>
+    <text x="0" y="-6" font-family="'Arial Black', sans-serif" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">BAJA RINGAN KANAL C75</text>
+    <text x="0" y="16" font-family="'Arial', sans-serif" font-size="12" font-weight="bold" fill="#38bdf8" text-anchor="middle">Tebal 0.75 mm | Panjang 6 Meter SNI</text>
+  </g>
+</svg>
+

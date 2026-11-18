@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </radialGradient>
+    <radialGradient id="floorShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Sand Texture Gradients -->
+    <radialGradient id="sandGlow" cx="45%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#78716c"/>
+      <stop offset="40%" stop-color="#57534e"/>
+      <stop offset="80%" stop-color="#44403c"/>
+      <stop offset="100%" stop-color="#292524"/>
+    </radialGradient>
+    <linearGradient id="truckBed" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="500" fill="url(#bgGlow)"/>
+  <ellipse cx="250" cy="440" rx="180" ry="25" fill="url(#floorShadow)"/>
+
+  <!-- Large Mound of Construction Sand (Gundukan Pasir Pasang) -->
+  <g transform="translate(0, 10)">
+    <!-- Sand Pile Mound -->
+    <path d="M 70,410 C 100,240 180,140 250,130 C 320,140 400,240 430,410 C 380,430 120,430 70,410 Z" fill="url(#sandGlow)" stroke="#292524" stroke-width="2"/>
+
+    <!-- Natural Sand Ridge Highlights & Shadow Creases -->
+    <path d="M 250,130 Q 210,240 160,390" stroke="#a8a29e" stroke-width="4" fill="none" opacity="0.4"/>
+    <path d="M 250,130 Q 280,250 330,400" stroke="#1c1917" stroke-width="6" fill="none" opacity="0.5"/>
+    <path d="M 250,130 Q 240,260 250,410" stroke="#44403c" stroke-width="5" fill="none" opacity="0.6"/>
+
+    <!-- Fine Granular Dots (Tekstur Butiran Pasir Halus) -->
+    <g fill="#d6d3d1" opacity="0.35">
+      <circle cx="210" cy="200" r="3"/><circle cx="270" cy="220" r="2.5"/><circle cx="230" cy="260" r="3.5"/>
+      <circle cx="180" cy="300" r="2"/><circle cx="310" cy="290" r="3"/><circle cx="260" cy="330" r="2.5"/>
+      <circle cx="150" cy="350" r="3"/><circle cx="350" cy="350" r="2"/><circle cx="220" cy="380" r="3"/>
+      <circle cx="290" cy="380" r="3.5"/><circle cx="190" cy="240" r="2.5"/><circle cx="280" cy="180" r="2"/>
+    </g>
+
+    <!-- Pick-up Truck Icon / Badge -->
+    <g transform="translate(250, 240)">
+      <circle r="46" fill="#0f172a" stroke="#f59e0b" stroke-width="4"/>
+      <!-- Small Pick-up Truck Silhouette -->
+      <path d="M -26,10 L -22,-6 L -6,-6 L 4,2 L 24,2 L 24,10 Z" fill="#38bdf8"/>
+      <circle cx="-14" cy="12" r="5" fill="#f8fafc"/>
+      <circle cx="14" cy="12" r="5" fill="#f8fafc"/>
+      <text x="0" y="-14" font-family="'Arial Black', sans-serif" font-size="10" font-weight="900" fill="#facc15" text-anchor="middle">1 PICK-UP</text>
+    </g>
+  </g>
+
+  <!-- Product Badge -->
+  <g transform="translate(250, 405)">
+    <rect x="-170" y="-30" width="340" height="56" rx="10" fill="#0f172a" stroke="#f59e0b" stroke-width="3"/>
+    <text x="0" y="-6" font-family="'Arial Black', sans-serif" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">PASIR PASANG KALI PROGO</text>
+    <text x="0" y="16" font-family="'Arial', sans-serif" font-size="12" font-weight="bold" fill="#fde047" text-anchor="middle">Ayak Halus Bebas Lumpur &#8226; Muatan 1 Pick-up / Col T</text>
+  </g>
+</svg>
+

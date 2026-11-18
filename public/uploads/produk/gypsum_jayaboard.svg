@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="boardSurface" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="coreGypsum" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <filter id="boardShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="12" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect width="500" height="500" rx="20" fill="url(#bgGrad)"/>
+  <ellipse cx="250" cy="435" rx="180" ry="24" fill="#64748b" opacity="0.35" filter="blur(6px)"/>
+
+  <!-- Stack of Gypsum Boards in Perspective -->
+  <g filter="url(#boardShadow)">
+    <!-- Lower Board in Stack -->
+    <path d="M 90 280 L 260 170 L 410 250 L 240 370 Z" fill="#e2e8f0"/>
+    <path d="M 90 280 L 240 370 L 240 380 L 90 290 Z" fill="url(#coreGypsum)"/>
+    <path d="M 240 370 L 410 250 L 410 260 L 240 380 Z" fill="#64748b"/>
+
+    <!-- Main Front Gypsum Board (Top Sheet) -->
+    <!-- Core thickness edge Left -->
+    <path d="M 80 260 L 230 350 L 230 362 L 80 272 Z" fill="url(#coreGypsum)" stroke="#475569" stroke-width="1"/>
+    <!-- Core thickness edge Right -->
+    <path d="M 230 350 L 420 230 L 420 242 L 230 362 Z" fill="#64748b" stroke="#334155" stroke-width="1"/>
+
+    <!-- Front Face Sheet (White Paper Liner) -->
+    <path d="M 80 260 L 270 140 L 420 230 L 230 350 Z" fill="url(#boardSurface)" stroke="#0284c7" stroke-width="2"/>
+
+    <!-- Blue Tape / Edge Banding (Iconic Jayaboard Blue End Strip) -->
+    <path d="M 80 260 L 95 250 L 245 340 L 230 350 Z" fill="#0284c7"/>
+    <text x="160" y="305" font-family="'Arial Black', sans-serif" font-size="7" font-weight="900" fill="#ffffff" transform="rotate(32 160 305)">JAYABOARD SHEETROCK 9MM</text>
+
+    <!-- Center Brand Typography on Board -->
+    <g transform="translate(250, 240) rotate(-18)">
+      <rect x="-85" y="-35" width="170" height="70" rx="8" fill="#0369a1" opacity="0.95"/>
+      <text x="0" y="-8" font-family="'Arial Black', Impact, sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">JAYABOARD</text>
+      <text x="0" y="8" font-family="'Arial', sans-serif" font-size="10" font-weight="bold" fill="#facc15" text-anchor="middle">SHEETROCK BRAND</text>
+      <text x="0" y="24" font-family="'Arial', sans-serif" font-size="8" font-weight="bold" fill="#bae6fd" text-anchor="middle">TEBAL 9 MM &#8226; 120 x 240 CM</text>
+    </g>
+
+    <!-- Beveled Edge Line -->
+    <path d="M 83 260 L 270 143 L 417 230" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+  </g>
+
+  <!-- Top Spec Ribbon -->
+  <rect x="25" y="25" width="240" height="34" rx="8" fill="#0284c7"/>
+  <text x="145" y="47" font-family="'Arial', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">GYPSUM JAYABOARD 9MM</text>
+
+  <!-- Quality Stamp -->
+  <g transform="translate(425, 70)">
+    <circle cx="0" cy="0" r="32" fill="#0f172a" stroke="#ffffff" stroke-width="2"/>
+    <text x="0" y="-8" font-family="'Arial Black', sans-serif" font-size="8" font-weight="900" fill="#ffffff" text-anchor="middle">ANTI LENDUT</text>
+    <text x="0" y="7" font-family="'Arial Black', sans-serif" font-size="11" font-weight="900" fill="#facc15" text-anchor="middle">ORIGINAL</text>
+    <text x="0" y="18" font-family="'Arial', sans-serif" font-size="7" font-weight="bold" fill="#38bdf8" text-anchor="middle">PLAFON RUMAH</text>
+  </g>
+
+  <!-- Bottom Info -->
+  <rect x="130" y="450" width="240" height="24" rx="12" fill="#1e293b"/>
+  <text x="250" y="466" font-family="'Arial', sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">STANDAR PLAFON &amp; PARTISI RUANGAN</text>
+</svg>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </radialGradient>
+    <radialGradient id="floorShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Steel Hammer Head Gradients -->
+    <linearGradient id="hammerSteel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="30%" stop-color="#f8fafc"/>
+      <stop offset="60%" stop-color="#64748b"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="rubberGrip" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="50%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="500" fill="url(#bgGlow)"/>
+  <ellipse cx="250" cy="435" rx="160" ry="22" fill="url(#floorShadow)"/>
+
+  <!-- Claw Hammer at Dynamic 45-degree Angle -->
+  <g transform="translate(250, 220) rotate(-40)">
+    <!-- Long Shaft (Batang Gagang Palu) -->
+    <rect x="-14" y="-20" width="28" height="260" rx="6" fill="#334155" stroke="#1e293b" stroke-width="2"/>
+    <rect x="-7" y="-20" width="14" height="260" fill="#64748b" opacity="0.6"/>
+
+    <!-- Rubber Grip (Gagang Karet Anti Selip Orange/Hitam) -->
+    <g transform="translate(0, 90)">
+      <path d="M -18,0 C -20,60 -22,120 -16,160 C -12,170 12,170 16,160 C 22,120 20,60 18,0 Z" fill="url(#rubberGrip)" stroke="#b45309" stroke-width="2"/>
+      
+      <!-- Black Rubber Inlays / Texture Ridges -->
+      <g fill="#1e293b">
+        <rect x="-16" y="25" width="32" height="6" rx="3"/>
+        <rect x="-16" y="45" width="32" height="6" rx="3"/>
+        <rect x="-16" y="65" width="32" height="6" rx="3"/>
+        <rect x="-16" y="85" width="32" height="6" rx="3"/>
+        <rect x="-16" y="105" width="32" height="6" rx="3"/>
+        <rect x="-16" y="125" width="32" height="6" rx="3"/>
+      </g>
+      <!-- Lanyard Hole -->
+      <circle cx="0" cy="150" r="5" fill="#1e293b" stroke="#ffffff" stroke-width="1.5"/>
+    </g>
+
+    <!-- Heavy Forged Steel Hammer Head (Kepala Palu Baja) -->
+    <g transform="translate(0, -35)">
+      <!-- Central Eye Socket -->
+      <rect x="-24" y="-18" width="48" height="36" rx="5" fill="url(#hammerSteel)" stroke="#334155" stroke-width="2"/>
+
+      <!-- Flat Striking Face (Muka Pemukul Rata) -->
+      <path d="M 20,-14 L 80,-10 L 85,-16 L 90,16 L 85,10 L 20,14 Z" fill="url(#hammerSteel)" stroke="#334155" stroke-width="2"/>
+      <ellipse cx="88" cy="0" rx="4" ry="15" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+
+      <!-- Curved Claw (Cakar Pencabut Paku Lengkung) -->
+      <path d="M -20,-12 C -60,-16 -100,-4 -115,20 C -118,26 -112,30 -105,26 C -95,8 -65,4 -20,10 Z" fill="url(#hammerSteel)" stroke="#334155" stroke-width="2"/>
+      <!-- V-shaped Nail Slot -->
+      <polygon points="-70,2 -115,20 -60,10" fill="#1e293b"/>
+    </g>
+  </g>
+
+  <!-- Product Badge -->
+  <g transform="translate(250, 405)">
+    <rect x="-170" y="-30" width="340" height="56" rx="10" fill="#0f172a" stroke="#f59e0b" stroke-width="3"/>
+    <text x="0" y="-6" font-family="'Arial Black', sans-serif" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">PALU KAMBING / MARTIL CAKAR</text>
+    <text x="0" y="16" font-family="'Arial', sans-serif" font-size="12" font-weight="bold" fill="#fde047" text-anchor="middle">Baja Tempa 16 Oz &#8226; Gagang Karet Ergonomis Anti Selip</text>
+  </g>
+</svg>
+

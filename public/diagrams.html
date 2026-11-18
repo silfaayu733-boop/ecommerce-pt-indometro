@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>E‑Commerce PT. Indo Metro – Dokumentasi Diagram</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+<style>
+  body {font-family:Arial,Helvetica,sans-serif;margin:20px;}
+  h2 {margin-top:40px;}
+  .diagram {margin:20px 0;}
+  .title {font-weight:bold;margin-bottom:5px;}
+</style>
+</head>
+<body>
+<h1>E‑Commerce PT. Indo Metro – Dokumentasi Diagram</h1>
+
+<h2>1. System Flowchart (Vertical)</h2>
+<div class="diagram">
+```mermaid
+flowchart TB
+    Start([Start]) --> A[Customer membuka website]
+    A --> B[Customer melihat & memilih produk]
+    B --> C[Customer menambahkan produk ke keranjang]
+    C --> D[Web UI menampilkan keranjang]
+    D --> E[Cart Controller mengelola keranjang]
+    E --> F[Sistem membuat invoice]
+    F --> G[Sistem menghitung total pembayaran]
+    G --> H[Halaman pembayaran menampilkan QRIS]
+    H --> I{Pilih metode pembayaran}
+    I -->|Upload bukti| J[Order Controller menerima bukti]
+    I -->|Pembayaran demo| K[Order Controller menerima demo]
+    J --> L[Kasir memeriksa bukti pembayaran]
+    K --> L
+    L --> M{Pembayaran valid?}
+    M -->|Tidak| N[Status kembali Menunggu Pembayaran]
+    N --> O[Customer dapat membayar ulang]
+    M -->|Ya| P[Status invoice menjadi Lunas / Packing Gudang]
+    P --> Q[Gudang menyiapkan barang]
+    Q --> R[Kurir melakukan pengiriman]
+    R --> S[Customer menerima pesanan]
+    S --> End([Selesai])
+    style Start fill:#cfc,stroke:#333,stroke-width:2px;
+    style End fill:#cfc,stroke:#333,stroke-width:2px;
+    style M shape:decision,fill:#ff9,stroke:#333,stroke-width:2px;
+```
+</div>
+
+<h2>2. Entity‑Relationship Diagram (ERD)</h2>
+<div class="diagram">
+```mermaid
+erDiagram
+    USER ||--o{ ROLE : "has"
+    USER ||--o{ INVOICE : "places"
+    USER ||--o{ CART : "has"
+    INVOICE ||--|{ INVOICE_LOG : "contains"
+    INVOICE ||--|| BUKTI : "has"
+    INVOICE ||--|{ KOMPLEN : "may have"
+    KATEGORI ||--|{ PRODUK : "contains"
+    PRODUK ||--|{ INVOICE_LOG : "appears in"
+    PRODUK ||--|{ CART : "can be added to"
+    CONFIG ||--|| INVOICE : "provides QRIS"
+    ROLE {
+        int id PK
+        string role_name
+    }
+    USER {
+        int id PK
+        string name
+        string email
+        int role_id FK
+    }
+    KATEGORI {
+        int id PK
+        string nama_kategori
+    }
+    PRODUK {
+        int id PK
+        int id_kategori FK
+        string kode
+        string nama
+        string satuan
+        decimal harga
+        decimal stok
+    }
+    INVOICE {
+        int id PK
+        string kode_invoice
+        int id_user FK
+        decimal grandtotal
+        int status
+    }
+    INVOICE_LOG {
+        int id PK
+        int id_invoice FK
+        int id_produk FK
+        int qty
+        decimal harga
+    }
+    BUKTI {
+        int id PK
+        int id_invoice FK
+        string no_rek
+        string bank
+        decimal nominal
+        string file
+        string status_verifikasi
+    }
+    KOMPLEN {
+        int id PK
+        int id_invoice FK
+        int id_user FK
+        string isi
+        string foto_bukti
+        string status
+    }
+    CART {
+        int id PK
+        int id_user FK
+        int id_produk FK
+        int qty
+    }
+    CONFIG {
+        int id PK
+        string qris
+    }
+```
+</div>
+
+<h2>3. Use‑Case Diagram</h2>
+<div class="diagram">
+```mermaid
+usecaseDiagram
+    actor Customer
+    actor Kasir
+    actor Admin
+    actor "Staff Gudang" as Gudang
+
+    Customer --> (Lihat Produk)
+    Customer --> (Tambah ke Keranjang)
+    Customer --> (Checkout)
+    Customer --> (Upload Bukti Pembayaran)
+    Customer --> (Lihat Status Pesanan)
+    Customer --> (Ajukan Komplain)
+
+    Kasir --> (Lihat Daftar Pesanan)
+    Kasir --> (Memeriksa Bukti Pembayaran)
+    Kasir --> (Validasi Pembayaran)
+    Kasir --> (Update Status Pesanan)
+
+    Admin --> (Kelola Produk)
+    Admin --> (Kelola Kategori)
+    Admin --> (Kelola Pengguna & Role)
+    Admin --> (Laporan Penjualan)
+    Admin --> (Pengaturan QRIS)
+
+    Gudang --> (Masukkan Stok Barang)
+    Gudang --> (Packing Pesanan)
+    Gudang --> (Proses Pengiriman)
+    Gudang --> (Update Status Pengiriman)
+```
+</div>
+
+<h2>4. Activity Diagram – Proses Pembayaran</h2>
+<div class="diagram">
+```mermaid
+activityDiagram
+    start
+    :Customer memilih produk;
+    :Customer melakukan checkout;
+    :Sistem menampilkan halaman QRIS;
+    decision "Pilih metode pembayaran";
+    yes -->|Upload bukti| :Customer mengunggah bukti;
+    no -->|Demo| :Customer menekan tombol Bayar Demo;
+    :OrderController menyimpan data bukti (atau dummy);
+    :Status invoice menjadi Menunggu Validasi Kasir;
+    :Kasir memeriksa bukti pembayaran;
+    decision "Pembayaran valid?";
+    yes -->|Ya| :Kasir mengubah status menjadi Valid;
+    :Invoice status = Packing Gudang;
+    no -->|Tidak| :Kasir menolak bukti;
+    :Status invoice kembali Menunggu Pembayaran;
+    end
+```
+</div>
+
+<h2>5. Sequence Diagram – Order Lifecycle</h2>
+<div class="diagram">
+```mermaid
+sequenceDiagram
+    participant C as Customer
+    participant UI as Web UI
+    participant OC as OrderController
+    participant K as Kasir
+    participant G as Gudang
+
+    C->>UI: Buka website & pilih produk
+    UI->>OC: Request buat Invoice
+    OC-->>C: Tampilkan halaman QRIS
+    alt Demo Payment
+        C->>OC: POST /pesanan/{kode}/demo-bayar
+        OC->>OC: Buat bukti dummy & set status Menunggu Validasi
+    else Upload Bukti
+        C->>OC: POST /pesanan/{kode}/bukti (file)
+        OC->>OC: Simpan file, buat record Bukti, set status Menunggu Validasi
+    end
+    OC-->>C: Success message
+    K->>OC: GET /kasir/pesanan/{kode}
+    K->>OC: POST /kasir/pesanan/{kode}/validasi (terima/tolak)
+    OC->>OC: Update status Invoice (Packing / Menunggu Pembayaran)
+    G->>OC: GET /gudang/pengiriman/{kode}
+    G->>OC: POST /gudang/pengiriman/{kode}/proses
+    OC->>OC: Update status menjadi Dikirim
+    C->>UI: Lihat status selesai
+```
+</div>
+
+<h2>6. Class Diagram</h2>
+<div class="diagram">
+```mermaid
+classDiagram
+    class User {
+        +int id
+        +string name
+        +string email
+        +int role_id
+    }
+    class Role {
+        +int id
+        +string role_name
+    }
+    class Kategori {
+        +int id
+        +string nama_kategori
+    }
+    class Produk {
+        +int id
+        +int id_kategori
+        +string kode
+        +string nama
+        +string satuan
+        +decimal harga
+        +decimal stok
+    }
+    class Invoice {
+        +int id
+        +string kode_invoice
+        +int id_user
+        +decimal grandtotal
+        +int status
+    }
+    class InvoiceLog {
+        +int id
+        +int id_invoice
+        +int id_produk
+        +int qty
+        +decimal harga
+    }
+    class Bukti {
+        +int id
+        +int id_invoice
+        +string no_rek
+        +string bank
+        +decimal nominal
+        +string file
+        +string status_verifikasi
+    }
+    class Komplen {
+        +int id
+        +int id_invoice
+        +int id_user
+        +string isi
+        +string foto_bukti
+        +string status
+    }
+    class Cart {
+        +int id
+        +int id_user
+        +int id_produk
+        +int qty
+    }
+    class Config {
+        +int id
+        +string qris
+    }
+    User "*" --> "1" Role : belongs_to
+    User "*" --> "*" Invoice : places
+    User "*" --> "*" Cart : has
+    Invoice "1" --> "*" InvoiceLog : contains
+    Invoice "1" --> "0..1" Bukti : has
+    Invoice "1" --> "*" Komplen : may_have
+    Kategori "1" --> "*" Produk : contains
+    Produk "1" --> "*" InvoiceLog : appears_in
+    Produk "1" --> "*" Cart : can_be_added_to
+    Config "1" --> "1" Invoice : provides_QRIS
+```
+</div>
+
+<h2>7. Component Diagram</h2>
+<div class="diagram">
+```mermaid
+componentDiagram
+    component "Web Browser" as Browser
+    component "Laravel Web UI" as UI
+    component "Controllers" as Controllers {
+        CartController
+        OrderController
+        KasirController
+        GudangController
+    }
+    component "Models / Eloquent" as Models {
+        User
+        Role
+        Kategori
+        Produk
+        Invoice
+        InvoiceLog
+        Bukti
+        Komplen
+        Cart
+        Config
+    }
+    component "MySQL Database" as DB
+    component "QRIS Service (static image)" as QRIS
+
+    Browser --> UI : HTTP Requests
+    UI --> Controllers : Calls
+    Controllers --> Models : Eloquent ORM
+    Models --> DB : CRUD
+    UI --> QRIS : Display QR code
+```
+</div>
+
+<h2>8. Deployment Diagram</h2>
+<div class="diagram">
+```mermaid
+deploymentDiagram
+    node "Client Machine" {
+        device Browser
+    }
+    node "Web Server (Apache/Nginx)" {
+        container "PHP (Laravel)" {
+            component "App Code" as App
+        }
+        container "PHP" {
+            component "Composer Autoloader" as Autoloader
+        }
+    }
+    node "Database Server" {
+        database MySQL
+    }
+    Browser --> App : HTTP/HTTPS
+    App --> Autoloader : load classes
+    App --> MySQL : PDO/MySQLi
+    MySQL --> App : query results
+```
+</div>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </radialGradient>
+    <radialGradient id="floorShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"/>
+    </radialGradient>
+    <!-- AAC Concrete Surface Shading -->
+    <linearGradient id="hebelTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="hebelFront" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <linearGradient id="hebelSide" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="500" fill="url(#bgGlow)"/>
+  <ellipse cx="250" cy="435" rx="170" ry="22" fill="url(#floorShadow)"/>
+
+  <!-- Stack of 3D AAC Blocks (Bata Hebel) -->
+  <g transform="translate(250, 190)">
+    <!-- Block 1 (Bottom Left) -->
+    <g transform="translate(-80, 70)">
+      <polygon points="0,-40 80,-5 0,30 -80,-5" fill="url(#hebelTop)" stroke="#94a3b8" stroke-width="1.5"/>
+      <polygon points="-80,-5 0,30 0,75 -80,40" fill="url(#hebelFront)" stroke="#94a3b8" stroke-width="1.5"/>
+      <polygon points="0,30 80,-5 80,40 0,75" fill="url(#hebelSide)" stroke="#94a3b8" stroke-width="1.5"/>
+    </g>
+
+    <!-- Block 2 (Bottom Right) -->
+    <g transform="translate(60, 70)">
+      <polygon points="0,-40 80,-5 0,30 -80,-5" fill="url(#hebelTop)" stroke="#94a3b8" stroke-width="1.5"/>
+      <polygon points="-80,-5 0,30 0,75 -80,40" fill="url(#hebelFront)" stroke="#94a3b8" stroke-width="1.5"/>
+      <polygon points="0,30 80,-5 80,40 0,75" fill="url(#hebelSide)" stroke="#94a3b8" stroke-width="1.5"/>
+    </g>
+
+    <!-- Block 3 (Middle Main) -->
+    <g transform="translate(0, 15)">
+      <polygon points="0,-45 120,5 0,55 -120,5" fill="url(#hebelTop)" stroke="#94a3b8" stroke-width="2"/>
+      <polygon points="-120,5 0,55 0,105 -120,55" fill="url(#hebelFront)" stroke="#94a3b8" stroke-width="2"/>
+      <polygon points="0,55 120,5 120,55 0,105" fill="url(#hebelSide)" stroke="#94a3b8" stroke-width="2"/>
+
+      <!-- HEBEL Stamp on Front Surface -->
+      <g transform="translate(-60, 45) rotate(-14)">
+        <text x="0" y="0" font-family="'Arial Black', sans-serif" font-size="22" font-weight="900" fill="#0284c7" opacity="0.8" letter-spacing="2">HEBEL</text>
+        <text x="0" y="14" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#334155" opacity="0.8">60 x 20 x 7.5 cm</text>
+      </g>
+    </g>
+
+    <!-- Block 4 (Top Block Stacked) -->
+    <g transform="translate(-30, -55)">
+      <polygon points="0,-45 120,5 0,55 -120,5" fill="url(#hebelTop)" stroke="#94a3b8" stroke-width="2"/>
+      <polygon points="-120,5 0,55 0,105 -120,55" fill="url(#hebelFront)" stroke="#94a3b8" stroke-width="2"/>
+      <polygon points="0,55 120,5 120,55 0,105" fill="url(#hebelSide)" stroke="#94a3b8" stroke-width="2"/>
+
+      <g transform="translate(-60, 45) rotate(-14)">
+        <text x="0" y="0" font-family="'Arial Black', sans-serif" font-size="22" font-weight="900" fill="#0284c7" opacity="0.8" letter-spacing="2">AAC BLOCK</text>
+        <text x="0" y="14" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#334155" opacity="0.8">PRESISI TINGGI SNI</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Product Spec Badge -->
+  <g transform="translate(250, 405)">
+    <rect x="-165" y="-30" width="330" height="56" rx="10" fill="#0369a1" stroke="#38bdf8" stroke-width="3"/>
+    <text x="0" y="-6" font-family="'Arial Black', sans-serif" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">BATA RINGAN HEBEL 7.5 CM</text>
+    <text x="0" y="16" font-family="'Arial', sans-serif" font-size="12" font-weight="bold" fill="#fef08a" text-anchor="middle">Ukuran 60x20x7.5 cm | Isi 111 Pcs / M³</text>
+  </g>
+</svg>
+

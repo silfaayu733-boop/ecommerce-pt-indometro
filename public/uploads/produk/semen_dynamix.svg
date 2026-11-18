@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </radialGradient>
+    <radialGradient id="floorShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Dynamix Red-Orange Gradient -->
+    <linearGradient id="dynamixGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e63946"/>
+      <stop offset="40%" stop-color="#d90429"/>
+      <stop offset="80%" stop-color="#f77f00"/>
+      <stop offset="100%" stop-color="#d62828"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="500" fill="url(#bgGlow)"/>
+  <ellipse cx="250" cy="445" rx="170" ry="25" fill="url(#floorShadow)"/>
+
+  <g transform="translate(0, 5)">
+    <!-- Sack Body -->
+    <path d="M 125,95 C 130,80 370,80 375,95 C 390,140 395,380 380,420 C 365,435 135,435 120,420 C 105,380 110,140 125,95 Z" 
+          fill="url(#dynamixGrad)" stroke="#ba181b" stroke-width="3"/>
+
+    <!-- Kraft Texture Accents Top & Bottom -->
+    <path d="M 125,95 Q 250,115 375,95 L 375,120 Q 250,135 125,120 Z" fill="#fca311" opacity="0.9"/>
+    <path d="M 120,400 Q 250,415 380,400 L 380,420 Q 250,435 120,420 Z" fill="#fca311" opacity="0.9"/>
+
+    <!-- Diagonal Dynamic Accent Lines -->
+    <path d="M 115,220 L 385,150 L 385,175 L 115,245 Z" fill="#ffffff" opacity="0.2"/>
+    <path d="M 115,310 L 385,240 L 385,265 L 115,335 Z" fill="#ffffff" opacity="0.2"/>
+
+    <!-- Logo Dynamix -->
+    <g transform="translate(250, 190)">
+      <circle r="45" fill="#ffffff" stroke="#fca311" stroke-width="4"/>
+      <!-- Stylized D letter in orange/red -->
+      <path d="M -18,-24 L 2,-24 C 18,-24 26,-14 26,0 C 26,14 18,24 2,24 L -18,24 Z" fill="#d90429"/>
+      <path d="M -6,-12 L 0,-12 C 9,-12 14,-6 14,0 C 14,6 9,12 0,12 L -6,12 Z" fill="#ffffff"/>
+    </g>
+
+    <!-- Brand Name -->
+    <text x="250" y="275" font-family="'Arial Black', Impact, sans-serif" font-size="34" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">DYNAMIX</text>
+    
+    <!-- Subtitle Banner -->
+    <rect x="150" y="295" width="200" height="28" rx="6" fill="#ffffff"/>
+    <text x="250" y="315" font-family="'Arial Black', sans-serif" font-size="14" font-weight="900" fill="#d90429" text-anchor="middle" letter-spacing="1">SERBAGUNA</text>
+
+    <!-- Tagline -->
+    <text x="250" y="345" font-family="'Arial', sans-serif" font-size="11" font-weight="bold" fill="#fefae0" text-anchor="middle">BERKUALITAS TINGGI &amp; KUAT</text>
+
+    <!-- Weight & SNI -->
+    <g transform="translate(250, 385)">
+      <rect x="-80" y="-16" width="160" height="32" rx="6" fill="#fca311"/>
+      <text x="0" y="6" font-family="'Arial Black', sans-serif" font-size="18" font-weight="900" fill="#000000" text-anchor="middle">BERAT 40 KG</text>
+    </g>
+  </g>
+</svg>
+

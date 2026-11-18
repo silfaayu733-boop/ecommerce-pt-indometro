@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </radialGradient>
+    <radialGradient id="floorShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pvcShine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="25%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#e2e8f0"/>
+      <stop offset="80%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <linearGradient id="pipeHole" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="500" fill="url(#bgGlow)"/>
+  <ellipse cx="250" cy="430" rx="190" ry="25" fill="url(#floorShadow)"/>
+
+  <!-- Pipes Bundle -->
+  <g transform="translate(50, 110) rotate(-15 200 150)">
+    <!-- Back Pipes -->
+    <rect x="0" y="80" width="450" height="40" rx="4" fill="url(#pvcShine)" stroke="#94a3b8" stroke-width="1.5"/>
+    <rect x="0" y="130" width="450" height="40" rx="4" fill="url(#pvcShine)" stroke="#94a3b8" stroke-width="1.5"/>
+
+    <!-- Middle Main Pipe -->
+    <g>
+      <rect x="0" y="105" width="450" height="42" rx="4" fill="url(#pvcShine)" stroke="#64748b" stroke-width="2"/>
+      
+      <!-- Blue Rucika Stripe along the pipe -->
+      <rect x="0" y="118" width="450" height="15" fill="#0284c7"/>
+      
+      <!-- Rucika Brand Text Stamped on Pipe -->
+      <g transform="translate(60, 130)">
+        <text x="0" y="0" font-family="'Arial Black', sans-serif" font-size="11" font-weight="900" fill="#ffffff" letter-spacing="1.5">
+          RUCIKA STANDARD JIS K 6741 &#8226; VP AW 3/4 INCH (22 mm) &#8226; AIR BERSIH SNI
+        </text>
+      </g>
+    </g>
+
+    <!-- Front Pipe -->
+    <g>
+      <rect x="0" y="135" width="450" height="42" rx="4" fill="url(#pvcShine)" stroke="#64748b" stroke-width="2"/>
+      <rect x="0" y="148" width="450" height="15" fill="#0284c7"/>
+      <g transform="translate(80, 160)">
+        <text x="0" y="0" font-family="'Arial Black', sans-serif" font-size="11" font-weight="900" fill="#ffffff" letter-spacing="1.5">
+          RUCIKA VP AW 3/4 INCH &#8226; KUAT &amp; TIDAK MUDAH PECAH
+        </text>
+      </g>
+    </g>
+
+    <!-- Pipe Openings (Tampak Lubang Potongan Pipa) -->
+    <!-- Hole 1 -->
+    <g transform="translate(0, 100)">
+      <ellipse cx="0" cy="0" rx="10" ry="20" fill="url(#pvcShine)" stroke="#94a3b8" stroke-width="2"/>
+      <ellipse cx="-2" cy="0" rx="6" ry="15" fill="url(#pipeHole)"/>
+    </g>
+    <!-- Hole 2 (Main) -->
+    <g transform="translate(0, 126)">
+      <ellipse cx="0" cy="0" rx="12" ry="21" fill="url(#pvcShine)" stroke="#64748b" stroke-width="2.5"/>
+      <ellipse cx="-2" cy="0" rx="8" ry="16" fill="url(#pipeHole)"/>
+    </g>
+    <!-- Hole 3 (Front) -->
+    <g transform="translate(0, 156)">
+      <ellipse cx="0" cy="0" rx="12" ry="21" fill="url(#pvcShine)" stroke="#64748b" stroke-width="2.5"/>
+      <ellipse cx="-2" cy="0" rx="8" ry="16" fill="url(#pipeHole)"/>
+    </g>
+  </g>
+
+  <!-- Product Card Badge -->
+  <g transform="translate(250, 395)">
+    <rect x="-160" y="-30" width="320" height="56" rx="10" fill="#0369a1" stroke="#38bdf8" stroke-width="3"/>
+    <text x="0" y="-6" font-family="'Arial Black', sans-serif" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">PIPA PVC RUCIKA AW 3/4 INCH</text>
+    <text x="0" y="16" font-family="'Arial', sans-serif" font-size="12" font-weight="bold" fill="#fef08a" text-anchor="middle">Kelas AW Tekanan Tinggi | Panjang 4 Meter</text>
+  </g>
+</svg>

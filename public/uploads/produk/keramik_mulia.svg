@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdfbf7"/>
+      <stop offset="100%" stop-color="#f5efe6"/>
+    </linearGradient>
+    <linearGradient id="tileBeigeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="30%" stop-color="#fde68a"/>
+      <stop offset="70%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="tileSurface" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef9ee"/>
+      <stop offset="40%" stop-color="#fbf2dc"/>
+      <stop offset="80%" stop-color="#f3e3be"/>
+      <stop offset="100%" stop-color="#e2cb9b"/>
+    </linearGradient>
+    <linearGradient id="tileEdgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <linearGradient id="boxCardboard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#92400e"/>
+    </linearGradient>
+    <filter id="tileShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="12" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" rx="20" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle circular warm glow -->
+  <circle cx="250" cy="250" r="190" fill="#fef3c7" opacity="0.4"/>
+
+  <!-- Shadow below ceramic stack -->
+  <ellipse cx="250" cy="425" rx="175" ry="32" fill="#78350f" opacity="0.25" filter="blur(8px)"/>
+
+  <!-- Cardboard Box in background (Mulia Ceramics Dus) -->
+  <g transform="translate(60, 110)">
+    <!-- Box back -->
+    <path d="M 40 40 L 320 40 L 340 180 L 20 180 Z" fill="url(#boxCardboard)" opacity="0.9"/>
+    <text x="180" y="85" font-family="'Arial Black', sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">MULIA</text>
+    <text x="180" y="105" font-family="'Arial', sans-serif" font-size="11" font-weight="bold" fill="#fef3c7" text-anchor="middle">CERAMICS TILE &#8226; 40 x 40 cm</text>
+    <rect x="110" y="120" width="140" height="20" rx="4" fill="#78350f"/>
+    <text x="180" y="134" font-family="'Arial', sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">1 DUS = 6 PCS (1.0 M&#178;)</text>
+  </g>
+
+  <!-- Foreground 3D Ceramic Tile in Isometric/Perspective View -->
+  <g filter="url(#tileShadow)">
+    <!-- Ceramic Tile Thickness Edges -->
+    <!-- Bottom Right Edge -->
+    <path d="M 250 380 L 410 270 L 410 282 L 250 392 Z" fill="#92400e"/>
+    <!-- Bottom Left Edge -->
+    <path d="M 90 270 L 250 380 L 250 392 L 90 282 Z" fill="#b45309"/>
+
+    <!-- Ceramic Tile Top Surface (Isometric Diamond 40x40) -->
+    <!-- Points: Top(250, 160), Right(410, 270), Bottom(250, 380), Left(90, 270) -->
+    <path d="M 250 160 L 410 270 L 250 380 L 90 270 Z" fill="url(#tileSurface)" stroke="#d97706" stroke-width="1.5"/>
+
+    <!-- Stone texture veins and speckles on ceramic surface -->
+    <path d="M 160 220 Q 220 250 260 230 Q 300 210 340 240" fill="none" stroke="#d4b483" stroke-width="3" opacity="0.6"/>
+    <path d="M 140 280 Q 200 310 250 290 Q 320 270 370 300" fill="none" stroke="#e0c9a6" stroke-width="4" opacity="0.7"/>
+    <path d="M 200 195 Q 230 220 280 205" fill="none" stroke="#cbb28d" stroke-width="2" opacity="0.5"/>
+    <path d="M 210 330 Q 250 345 300 325" fill="none" stroke="#cbb28d" stroke-width="2.5" opacity="0.6"/>
+
+    <!-- Ceramic Gloss Glaze Reflection (Diagonal light sheen) -->
+    <path d="M 180 180 L 240 170 L 320 330 L 260 340 Z" fill="#ffffff" opacity="0.25"/>
+
+    <!-- Center Brand Emblem Stamp -->
+    <g transform="translate(250, 270)">
+      <ellipse cx="0" cy="0" rx="36" ry="18" fill="#78350f" opacity="0.85"/>
+      <ellipse cx="0" cy="0" rx="33" ry="16" fill="none" stroke="#fef3c7" stroke-width="1"/>
+      <text x="0" y="4" font-family="'Arial Black', sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">MULIA</text>
+    </g>
+
+    <!-- Beveled Tile Borders -->
+    <path d="M 250 163 L 406 270 L 250 377 L 94 270 Z" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+  </g>
+
+  <!-- Spec Badges -->
+  <rect x="25" y="25" width="220" height="34" rx="8" fill="#b45309"/>
+  <text x="135" y="47" font-family="'Arial', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">KERAMIK LANTAI 40x40</text>
+
+  <!-- Quality Stamp -->
+  <g transform="translate(420, 70)">
+    <circle cx="0" cy="0" r="30" fill="#f59e0b" stroke="#ffffff" stroke-width="2"/>
+    <text x="0" y="-5" font-family="'Arial Black', sans-serif" font-size="8" font-weight="900" fill="#78350f" text-anchor="middle">GRADE A</text>
+    <text x="0" y="8" font-family="'Arial Black', sans-serif" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">KW-1</text>
+    <text x="0" y="18" font-family="'Arial', sans-serif" font-size="7" font-weight="bold" fill="#78350f" text-anchor="middle">PRESISI</text>
+  </g>
+
+  <!-- Bottom info bar -->
+  <rect x="130" y="445" width="240" height="24" rx="12" fill="#78350f"/>
+  <text x="250" y="461" font-family="'Arial', sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">MOTIF BEIGESTONE &#8226; TEXTURED MATT</text>
+</svg>

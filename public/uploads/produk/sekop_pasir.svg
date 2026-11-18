@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </radialGradient>
+    <radialGradient id="floorShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Shovel Steel Scoop Gradients -->
+    <linearGradient id="shovelBlade" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="30%" stop-color="#334155"/>
+      <stop offset="60%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="pipeHandle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="40%" stop-color="#fef08a"/>
+      <stop offset="70%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="500" fill="url(#bgGlow)"/>
+  <ellipse cx="250" cy="435" rx="160" ry="22" fill="url(#floorShadow)"/>
+
+  <!-- Construction Shovel (Sekop Pasir Gagang Besi) -->
+  <g transform="translate(250, 215) rotate(25)">
+    <!-- Tubular Steel Handle (Pipa Besi Gagang Oranye/Kuning) -->
+    <rect x="-11" y="-120" width="22" height="230" rx="4" fill="url(#pipeHandle)" stroke="#78350f" stroke-width="2"/>
+    <rect x="-4" y="-120" width="8" height="230" fill="#ffffff" opacity="0.4"/>
+
+    <!-- Top D-Grip Handle (Gagang Pegangan Huruf D) -->
+    <g transform="translate(0, -120)">
+      <path d="M -30,-45 L 30,-45 C 38,-45 42,-35 40,-25 L 30,10 C 25,18 15,20 0,20 C -15,20 -25,18 -30,10 L -40,-25 C -42,-35 -38,-45 -30,-45 Z" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+      <!-- Inner D Hole for Hand -->
+      <path d="M -18,-30 L 18,-30 C 22,-30 24,-25 22,-18 L 16,-2 C 14,2 8,4 0,4 C -8,4 -14,2 -16,-2 L -22,-18 C -24,-25 -22,-30 -18,-30 Z" fill="#e2e8f0"/>
+      <!-- Wooden Crossbar Grip -->
+      <rect x="-18" y="-38" width="36" height="12" rx="3" fill="#b45309"/>
+    </g>
+
+    <!-- Metal Collar Joint to Shovel Blade -->
+    <path d="M -18,100 L 18,100 L 26,145 L -26,145 Z" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
+    <circle cx="0" cy="120" r="4" fill="#94a3b8"/>
+
+    <!-- Shovel Scoop Blade (Daun Sekop Plat Baja Lengkung) -->
+    <g transform="translate(0, 140)">
+      <!-- Blade Body with Rim Flanges -->
+      <path d="M -75,0 L 75,0 C 82,60 80,100 70,140 C 65,155 35,160 0,160 C -35,160 -65,155 -70,140 C -80,100 -82,60 -75,0 Z" 
+            fill="url(#shovelBlade)" stroke="#0f172a" stroke-width="3"/>
+
+      <!-- Stiffener Ridge Indentations (Lekukan Penguat Tekanan) -->
+      <path d="M -25,20 L -25,130" stroke="#64748b" stroke-width="4" fill="none"/>
+      <path d="M 0,20 L 0,140" stroke="#94a3b8" stroke-width="5" fill="none"/>
+      <path d="M 25,20 L 25,130" stroke="#64748b" stroke-width="4" fill="none"/>
+
+      <!-- Blade Edge Bevel (Mata Sekop Tajam Bawah) -->
+      <path d="M -60,145 Q 0,165 60,145" stroke="#f8fafc" stroke-width="3" fill="none" opacity="0.8"/>
+    </g>
+  </g>
+
+  <!-- Product Badge -->
+  <g transform="translate(250, 405)">
+    <rect x="-170" y="-30" width="340" height="56" rx="10" fill="#0f172a" stroke="#f59e0b" stroke-width="3"/>
+    <text x="0" y="-6" font-family="'Arial Black', sans-serif" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">SEKOP PASIR GAGANG BESI</text>
+    <text x="0" y="16" font-family="'Arial', sans-serif" font-size="12" font-weight="bold" fill="#fde047" text-anchor="middle">Plat Baja Tebal Anti Bengkok &#8226; Gagang Pipa D-Grip</text>
+  </g>
+</svg>
+

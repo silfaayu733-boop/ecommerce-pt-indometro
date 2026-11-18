@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </radialGradient>
+    <radialGradient id="floorShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="trowelBlade" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="25%" stop-color="#e2e8f0"/>
+      <stop offset="60%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+    <linearGradient id="woodGrip" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#78350f"/>
+      <stop offset="40%" stop-color="#b45309"/>
+      <stop offset="70%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#92400e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="500" fill="url(#bgGlow)"/>
+  <ellipse cx="250" cy="435" rx="160" ry="22" fill="url(#floorShadow)"/>
+
+  <!-- Bricklayer's Trowel (Sendok / Cetok Semen Bulat) -->
+  <g transform="translate(250, 230) rotate(-25)">
+    <!-- Pointed Heart / Drop Blade (Daun Cetok Plat Baja Stainless) -->
+    <path d="M 0,-140 C 50,-100 95,-10 90,60 C 85,95 40,110 0,110 C -40,110 -85,95 -90,60 C -95,-10 -50,-100 0,-140 Z" 
+          fill="url(#trowelBlade)" stroke="#475569" stroke-width="3"/>
+
+    <!-- Shiny Light Reflection Strip across Blade -->
+    <path d="M 0,-130 C 25,-90 60,-10 40,90 L 10,95 C 30,10 10,-80 0,-130 Z" fill="#ffffff" opacity="0.45"/>
+
+    <!-- Center Rib Welding on Blade (Dudukan Las Tangkai) -->
+    <rect x="-10" y="10" width="20" height="65" rx="5" fill="#334155" stroke="#1e293b" stroke-width="1.5"/>
+    <circle cx="0" cy="30" r="4" fill="#94a3b8"/>
+    <circle cx="0" cy="55" r="4" fill="#94a3b8"/>
+
+    <!-- S-Curved Swan Neck (Leher Angsa Besi Penghubung) -->
+    <path d="M 0,60 C 0,100 35,110 40,140 C 45,160 30,175 0,175" fill="none" stroke="#1e293b" stroke-width="14" stroke-linecap="round"/>
+    <path d="M 0,60 C 0,100 35,110 40,140 C 45,160 30,175 0,175" fill="none" stroke="#64748b" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Wooden Handle (Gagang Kayu Pernis) -->
+    <g transform="translate(0, 175)">
+      <!-- Brass Ferrule (Cincin Kuningan Pengikat) -->
+      <rect x="-14" y="0" width="28" height="15" rx="2" fill="#eab308" stroke="#ca8a04" stroke-width="2"/>
+      
+      <!-- Ergonomic Wooden Grip Profile -->
+      <path d="M -14,15 C -20,40 -22,80 -16,110 C -12,120 12,120 16,110 C 22,80 20,40 14,15 Z" fill="url(#woodGrip)" stroke="#451a03" stroke-width="2.5"/>
+      <ellipse cx="0" cy="110" rx="16" ry="6" fill="#451a03"/>
+    </g>
+  </g>
+
+  <!-- Product Badge -->
+  <g transform="translate(250, 405)">
+    <rect x="-170" y="-30" width="340" height="56" rx="10" fill="#0f172a" stroke="#0284c7" stroke-width="3"/>
+    <text x="0" y="-6" font-family="'Arial Black', sans-serif" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">CETOK SEMEN STAINLESS 6 INCH</text>
+    <text x="0" y="16" font-family="'Arial', sans-serif" font-size="12" font-weight="bold" fill="#38bdf8" text-anchor="middle">Plat Baja Anti Karat &#8226; Gagang Kayu Kuat Nyaman Digenggam</text>
+  </g>
+</svg>
+

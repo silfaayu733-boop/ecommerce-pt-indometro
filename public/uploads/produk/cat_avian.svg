@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="canBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="25%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <linearGradient id="metalRim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="50%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+    <linearGradient id="avianRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <linearGradient id="avianGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+    <filter id="tinShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="14" stdDeviation="10" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" rx="20" fill="url(#bgGrad)"/>
+  <circle cx="250" cy="260" r="170" fill="#ffffff" opacity="0.7"/>
+  <ellipse cx="250" cy="425" rx="130" ry="22" fill="#64748b" opacity="0.3" filter="blur(6px)"/>
+
+  <!-- Tin Can Container -->
+  <g filter="url(#tinShadow)">
+    <!-- Main Cylinder Body (1 Kg Paint Tin) -->
+    <path d="M 155 160 L 155 390 Q 155 410 250 410 Q 345 410 345 390 L 345 160 Z" fill="url(#canBody)"/>
+
+    <!-- Bottom Metal Rim -->
+    <ellipse cx="250" cy="390" rx="95" ry="16" fill="url(#metalRim)"/>
+
+    <!-- Top Metal Rim Lip -->
+    <ellipse cx="250" cy="160" rx="98" ry="18" fill="url(#metalRim)"/>
+    <ellipse cx="250" cy="156" rx="92" ry="15" fill="#e2e8f0"/>
+    <ellipse cx="250" cy="154" rx="78" ry="12" fill="#cbd5e1" stroke="#94a3b8" stroke-width="2"/>
+
+    <!-- Label Wrap Body -->
+    <path d="M 155 180 L 155 375 Q 250 390 345 375 L 345 180 Q 250 195 155 180 Z" fill="#ffffff"/>
+
+    <!-- Red Top Curve on Label -->
+    <path d="M 155 180 L 155 240 Q 250 265 345 240 L 345 180 Q 250 195 155 180 Z" fill="url(#avianRed)"/>
+    
+    <!-- White Bird Logo Crest -->
+    <circle cx="250" cy="215" r="16" fill="#ffffff"/>
+    <path d="M 242 216 Q 250 205 258 211 Q 252 214 255 220 Q 247 218 242 216 Z" fill="#b91c1c"/>
+
+    <!-- Brand Typography AVIAN -->
+    <text x="250" y="295" font-family="'Arial Black', Impact, sans-serif" font-size="42" font-weight="900" fill="#15803d" text-anchor="middle" letter-spacing="2">AVIAN</text>
+    
+    <!-- Subtitle -->
+    <text x="250" y="318" font-family="'Arial Black', sans-serif" font-size="12" font-weight="900" fill="#dc2626" text-anchor="middle" letter-spacing="1">CAT KAYU &amp; BESI</text>
+    <text x="250" y="334" font-family="'Arial', sans-serif" font-size="10" font-weight="bold" fill="#475569" text-anchor="middle">SUPER HIGH GLOSS &#8226; CEPAT KERING</text>
+
+    <!-- Indonesian Flag Mini Badge -->
+    <rect x="235" y="342" width="30" height="7" fill="#ef4444"/>
+    <rect x="235" y="349" width="30" height="7" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.5"/>
+
+    <!-- Anti Karat & Anti Rayap Pill -->
+    <rect x="180" y="362" width="140" height="18" rx="9" fill="#15803d"/>
+    <text x="250" y="375" font-family="'Arial', sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">ANTI KARAT &amp; ANTI RAYAP</text>
+
+    <!-- 1 KG Seal on Left -->
+    <g transform="translate(180, 245)">
+      <circle cx="0" cy="0" r="18" fill="#facc15" stroke="#ffffff" stroke-width="1.5"/>
+      <text x="0" y="-2" font-family="'Arial Black', sans-serif" font-size="10" font-weight="bold" fill="#78350f" text-anchor="middle">1</text>
+      <text x="0" y="9" font-family="'Arial Black', sans-serif" font-size="8" font-weight="bold" fill="#78350f" text-anchor="middle">KG</text>
+    </g>
+
+    <!-- Tin Reflection Sheen -->
+    <path d="M 180 180 L 195 180 L 195 380 L 180 376 Z" fill="#ffffff" opacity="0.3"/>
+  </g>
+
+  <!-- Top Spec Ribbon -->
+  <rect x="25" y="25" width="220" height="34" rx="8" fill="#b91c1c"/>
+  <text x="135" y="47" font-family="'Arial', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">CAT KAYU &amp; BESI 1 KG</text>
+</svg>

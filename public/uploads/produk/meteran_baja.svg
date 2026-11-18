@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </radialGradient>
+    <radialGradient id="floorShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Tape Measure Body Gradients -->
+    <linearGradient id="tapeBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#facc15"/>
+      <stop offset="60%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </linearGradient>
+    <linearGradient id="yellowSteelTape" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="50%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#eab308"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="500" fill="url(#bgGlow)"/>
+  <ellipse cx="250" cy="435" rx="170" ry="22" fill="url(#floorShadow)"/>
+
+  <!-- Tape Measure Group -->
+  <g transform="translate(190, 220)">
+    <!-- Extended Steel Blade (Pita Meteran Kuning Menjulur ke Kanan) -->
+    <g transform="translate(60, 40)">
+      <polygon points="0,0 180,0 180,32 0,32" fill="url(#yellowSteelTape)" stroke="#ca8a04" stroke-width="1.5"/>
+      <!-- Metric Tick Marks (Garis Ukuran Milimeter & Sentimeter) -->
+      <g stroke="#0f172a" stroke-width="1.5">
+        <line x1="20" y1="0" x2="20" y2="18"/><line x1="40" y1="0" x2="40" y2="14"/><line x1="60" y1="0" x2="60" y2="18"/>
+        <line x1="80" y1="0" x2="80" y2="14"/><line x1="100" y1="0" x2="100" y2="22"/><line x1="120" y1="0" x2="120" y2="14"/>
+        <line x1="140" y1="0" x2="140" y2="18"/><line x1="160" y1="0" x2="160" y2="14"/><line x1="180" y1="0" x2="180" y2="22"/>
+      </g>
+      <!-- Sub-millimeter ticks -->
+      <g stroke="#475569" stroke-width="1">
+        <line x1="10" y1="0" x2="10" y2="8"/><line x1="30" y1="0" x2="30" y2="8"/><line x1="50" y1="0" x2="50" y2="8"/>
+        <line x1="70" y1="0" x2="70" y2="8"/><line x1="90" y1="0" x2="90" y2="8"/><line x1="110" y1="0" x2="110" y2="8"/>
+        <line x1="130" y1="0" x2="130" y2="8"/><line x1="150" y1="0" x2="150" y2="8"/><line x1="170" y1="0" x2="170" y2="8"/>
+      </g>
+      <!-- Numbers -->
+      <text x="100" y="28" font-family="'Arial', sans-serif" font-size="10" font-weight="900" fill="#0f172a" text-anchor="middle">10</text>
+      <!-- Metal End Hook (Kait Besi Ujung Meteran) -->
+      <polygon points="180,-4 186,-4 186,40 180,40" fill="#64748b" stroke="#334155" stroke-width="1.5"/>
+      <circle cx="183" cy="10" r="2" fill="#0f172a"/>
+      <circle cx="183" cy="22" r="2" fill="#0f172a"/>
+    </g>
+
+    <!-- Main Circular Casing (Bodi Meteran) -->
+    <rect x="-105" y="-95" width="190" height="175" rx="55" fill="#0f172a" stroke="#1e293b" stroke-width="3"/>
+    
+    <!-- Yellow Inner Casing -->
+    <rect x="-95" y="-85" width="170" height="155" rx="45" fill="url(#tapeBody)" stroke="#ca8a04" stroke-width="2"/>
+
+    <!-- Black Rubber Grip Bumpers on Casing -->
+    <path d="M -105,-30 C -112,0 -112,30 -100,55 L -85,45 C -95,25 -95,5 -88,-20 Z" fill="#0f172a"/>
+    <path d="M -30,-95 C 0,-102 30,-102 55,-90 L 45,-75 C 25,-85 5,-85 -20,-78 Z" fill="#0f172a"/>
+
+    <!-- Center Brand Disc -->
+    <circle cx="-10" cy="-5" r="48" fill="#0f172a" stroke="#e2e8f0" stroke-width="3"/>
+    <text x="-10" y="-8" font-family="'Arial Black', sans-serif" font-size="24" font-weight="900" fill="#facc15" text-anchor="middle">5M</text>
+    <text x="-10" y="10" font-family="'Arial', sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="1">19 mm</text>
+    <text x="-10" y="24" font-family="'Arial', sans-serif" font-size="8" font-weight="bold" fill="#38bdf8" text-anchor="middle">AUTO-LOCK</text>
+
+    <!-- Top Sliding Thumb Lock Button (Tombol Pengunci Geser) -->
+    <rect x="-35" y="-115" width="45" height="26" rx="5" fill="#dc2626" stroke="#991b1b" stroke-width="2"/>
+    <line x1="-28" y1="-106" x2="-3" y2="-106" stroke="#ffffff" stroke-width="2"/>
+    <line x1="-28" y1="-100" x2="-3" y2="-100" stroke="#ffffff" stroke-width="2"/>
+  </g>
+
+  <!-- Product Badge -->
+  <g transform="translate(250, 405)">
+    <rect x="-170" y="-30" width="340" height="56" rx="10" fill="#0f172a" stroke="#eab308" stroke-width="3"/>
+    <text x="0" y="-6" font-family="'Arial Black', sans-serif" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">METERAN ROLL BAJA 5 METER</text>
+    <text x="0" y="16" font-family="'Arial', sans-serif" font-size="12" font-weight="bold" fill="#fde047" text-anchor="middle">Pita Baja Anti Karat &#8226; Pengunci Otomatis Presisi Tinggi</text>
+  </g>
+</svg>
+

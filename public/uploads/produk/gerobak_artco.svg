@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="artcoRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="50%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+    <linearGradient id="trayInside" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b91c1c"/>
+      <stop offset="100%" stop-color="#7f1d1d"/>
+    </linearGradient>
+    <linearGradient id="steelPipe" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="50%" stop-color="#64748b"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="barrowShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="12" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" rx="20" fill="url(#bgGrad)"/>
+  <ellipse cx="250" cy="435" rx="190" ry="25" fill="#94a3b8" opacity="0.35" filter="blur(6px)"/>
+
+  <!-- Wheelbarrow Assembly in Side-Perspective Angle -->
+  <g filter="url(#barrowShadow)">
+    <!-- Back Leg Supports -->
+    <path d="M 330 330 L 330 420 L 350 420 L 350 330 Z" fill="#1e293b"/>
+    <path d="M 370 330 L 370 420 L 390 420 L 390 330 Z" fill="#334155"/>
+    <line x1="330" y1="375" x2="390" y2="375" stroke="#475569" stroke-width="4"/>
+
+    <!-- Handles (Left & Right Steel Pipe extending backward) -->
+    <path d="M 120 340 L 440 270" stroke="url(#steelPipe)" stroke-width="14" stroke-linecap="round"/>
+    <!-- Black Rubber Hand Grips -->
+    <rect x="420" y="260" width="45" height="18" rx="5" fill="#0f172a" transform="rotate(-13 420 260)"/>
+
+    <!-- Front Pneumatic Rubber Tire -->
+    <!-- Shadow below tire -->
+    <ellipse cx="120" cy="425" rx="40" ry="12" fill="#0f172a" opacity="0.4"/>
+    <!-- Outer Tire Rubber -->
+    <circle cx="120" cy="360" r="55" fill="#1e293b" stroke="#0f172a" stroke-width="5"/>
+    <!-- Tire Tread Ribs -->
+    <circle cx="120" cy="360" r="46" fill="none" stroke="#334155" stroke-width="6" stroke-dasharray="8,6"/>
+    <!-- Inner Steel Hub / Velg Red -->
+    <circle cx="120" cy="360" r="28" fill="#dc2626" stroke="#991b1b" stroke-width="2"/>
+    <!-- Hub Axle Center Bolt -->
+    <circle cx="120" cy="360" r="10" fill="#94a3b8"/>
+    <circle cx="120" cy="360" r="5" fill="#475569"/>
+
+    <!-- Front Axle Strut to Tray -->
+    <path d="M 120 360 L 155 270" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+    <path d="M 120 360 L 95 300" stroke="#475569" stroke-width="6"/>
+
+    <!-- Red Deep Dish Tray (Bak Gerobak) -->
+    <!-- Inside cavity / depth -->
+    <path d="M 90 270 L 220 220 L 390 230 L 350 310 L 140 330 Z" fill="url(#trayInside)"/>
+    
+    <!-- Exterior Side Plate of Tray -->
+    <path d="M 90 270 L 140 330 L 350 310 L 375 250 L 220 220 Z" fill="url(#artcoRed)" stroke="#991b1b" stroke-width="1.5"/>
+
+    <!-- Top Rolled Lip / Beaded Rim of Tray -->
+    <path d="M 88 270 L 220 220 L 392 230 L 375 250 L 220 238 L 88 274 Z" fill="#ef4444"/>
+
+    <!-- Bold ARTCO Brand Logo on Tray Side -->
+    <g transform="translate(235, 290) rotate(-6)">
+      <text x="0" y="0" font-family="'Arial Black', Impact, sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="3">ARTCO</text>
+      <text x="0" y="14" font-family="'Arial Black', sans-serif" font-size="8" font-weight="900" fill="#fef08a" text-anchor="middle" letter-spacing="1">ORIGINAL HEAVY DUTY</text>
+    </g>
+
+    <!-- Tray Highlight Reflection -->
+    <path d="M 105 275 L 145 320 L 165 318 L 125 273 Z" fill="#ffffff" opacity="0.3"/>
+  </g>
+
+  <!-- Top Spec Ribbon -->
+  <rect x="25" y="25" width="230" height="34" rx="8" fill="#dc2626"/>
+  <text x="140" y="47" font-family="'Arial', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">GEROBAK SORONG ARTCO</text>
+
+  <!-- Quality Stamp -->
+  <g transform="translate(425, 70)">
+    <circle cx="0" cy="0" r="32" fill="#0f172a" stroke="#facc15" stroke-width="2"/>
+    <text x="0" y="-8" font-family="'Arial Black', sans-serif" font-size="8" font-weight="900" fill="#ffffff" text-anchor="middle">BEBAN MAKS</text>
+    <text x="0" y="7" font-family="'Arial Black', sans-serif" font-size="12" font-weight="900" fill="#facc15" text-anchor="middle">300 KG</text>
+    <text x="0" y="18" font-family="'Arial', sans-serif" font-size="7" font-weight="bold" fill="#38bdf8" text-anchor="middle">BAN ANGIN</text>
+  </g>
+
+  <!-- Bottom Info -->
+  <rect x="130" y="450" width="240" height="24" rx="12" fill="#1e293b"/>
+  <text x="250" y="466" font-family="'Arial', sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">KHUSUS PROYEK COR &amp; MATERIAL PASIR</text>
+</svg>

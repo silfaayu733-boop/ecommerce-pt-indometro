@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="pailYellow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="25%" stop-color="#fde047"/>
+      <stop offset="75%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </linearGradient>
+    <linearGradient id="aquaBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <filter id="aquaShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="14" stdDeviation="10" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect width="500" height="500" rx="20" fill="url(#bgGrad)"/>
+  <ellipse cx="250" cy="425" rx="145" ry="24" fill="#64748b" opacity="0.35" filter="blur(6px)"/>
+
+  <!-- Aquaproof Pail -->
+  <g filter="url(#aquaShadow)">
+    <path d="M 140 160 L 160 395 Q 162 410 250 410 Q 338 410 340 395 L 360 160 Z" fill="url(#pailYellow)"/>
+    <ellipse cx="250" cy="395" rx="90" ry="14" fill="#ca8a04"/>
+
+    <!-- Handle Pivot -->
+    <rect x="132" y="180" width="12" height="20" rx="3" fill="#64748b"/>
+    <rect x="356" y="180" width="12" height="20" rx="3" fill="#64748b"/>
+    <path d="M 138 185 C 138 90, 362 90, 362 185" fill="none" stroke="#64748b" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Upper Lip -->
+    <ellipse cx="250" cy="160" rx="112" ry="22" fill="#ca8a04"/>
+    <ellipse cx="250" cy="148" rx="114" ry="20" fill="#facc15"/>
+    <ellipse cx="250" cy="144" rx="100" ry="15" fill="#ca8a04"/>
+
+    <!-- Front Label Surface (Blue Aquaproof Diamond Wave) -->
+    <path d="M 148 205 L 157 370 Q 250 382 343 370 L 352 205 Q 250 215 148 205 Z" fill="#ffffff"/>
+
+    <!-- Blue Curved Ocean Wave -->
+    <path d="M 148 205 L 150 260 Q 200 275 250 250 Q 300 225 351 250 L 352 205 Z" fill="url(#aquaBlue)"/>
+
+    <!-- Brand Typography AQUAPROOF -->
+    <text x="250" y="300" font-family="'Arial Black', Impact, sans-serif" font-size="34" font-weight="900" fill="#0369a1" text-anchor="middle" letter-spacing="2">AQUAPROOF</text>
+    <text x="250" y="322" font-family="'Arial Black', sans-serif" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle" letter-spacing="1">CAT PELAPIS ANTI BOCOR</text>
+    <text x="250" y="338" font-family="'Arial', sans-serif" font-size="10" font-weight="bold" fill="#64748b" text-anchor="middle">WATERPROOFING ELASTIS</text>
+
+    <!-- Color Chip (Grey / Abu-abu) -->
+    <rect x="195" y="348" width="110" height="18" rx="9" fill="#94a3b8"/>
+    <text x="250" y="361" font-family="'Arial', sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">WARNA ABU-ABU</text>
+
+    <!-- 4 KG Badge -->
+    <g transform="translate(305, 335)">
+      <circle cx="0" cy="0" r="20" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
+      <text x="0" y="-2" font-family="'Arial Black', sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+      <text x="0" y="9" font-family="'Arial Black', sans-serif" font-size="8" font-weight="bold" fill="#facc15" text-anchor="middle">KG</text>
+    </g>
+  </g>
+
+  <!-- Top Spec Ribbon -->
+  <rect x="25" y="25" width="230" height="34" rx="8" fill="#0284c7"/>
+  <text x="140" y="47" font-family="'Arial', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">AQUAPROOF 4 KG</text>
+
+  <!-- Quality Stamp -->
+  <g transform="translate(425, 70)">
+    <circle cx="0" cy="0" r="32" fill="#0f172a" stroke="#ffffff" stroke-width="2"/>
+    <text x="0" y="-8" font-family="'Arial Black', sans-serif" font-size="8" font-weight="900" fill="#ffffff" text-anchor="middle">PELAPIS</text>
+    <text x="0" y="7" font-family="'Arial Black', sans-serif" font-size="11" font-weight="900" fill="#facc15" text-anchor="middle">DAK COR</text>
+    <text x="0" y="18" font-family="'Arial', sans-serif" font-size="7" font-weight="bold" fill="#38bdf8" text-anchor="middle">TAHAN BOCOR</text>
+  </g>
+
+  <!-- Bottom Info -->
+  <rect x="130" y="450" width="240" height="24" rx="12" fill="#1e293b"/>
+  <text x="250" y="466" font-family="'Arial', sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ELASTIS 500-600% &#8226; ANTI RETAK</text>
+</svg>

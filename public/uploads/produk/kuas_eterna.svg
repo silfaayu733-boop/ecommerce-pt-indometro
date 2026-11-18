@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="woodGrip" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="40%" stop-color="#f97316"/>
+      <stop offset="80%" stop-color="#c2410c"/>
+      <stop offset="100%" stop-color="#9a3412"/>
+    </linearGradient>
+    <linearGradient id="tinFerrule" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="25%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+    <linearGradient id="bristlesGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="80%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <filter id="brushShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="14" stdDeviation="10" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" rx="20" fill="url(#bgGrad)"/>
+  <circle cx="250" cy="260" r="170" fill="#ffffff" opacity="0.6"/>
+  <ellipse cx="250" cy="430" rx="140" ry="20" fill="#94a3b8" opacity="0.35" filter="blur(6px)"/>
+
+  <!-- Paint Brush Standing Vertically -->
+  <g filter="url(#brushShadow)">
+    <!-- 1. Wooden Handle (Top) -->
+    <!-- Handle hanging hole -->
+    <path d="M 230 70 Q 250 50 270 70 L 265 190 Q 275 210 280 230 L 220 230 Q 225 210 235 190 Z" fill="url(#woodGrip)" stroke="#7c2d12" stroke-width="1.5"/>
+    <circle cx="250" cy="95" r="9" fill="#f8fafc" stroke="#7c2d12" stroke-width="2"/>
+
+    <!-- Handle Branding ETERNA -->
+    <text x="250" y="160" font-family="'Arial Black', Impact, sans-serif" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">ETERNA</text>
+    <text x="250" y="176" font-family="'Arial', sans-serif" font-size="9" font-weight="bold" fill="#fef08a" text-anchor="middle">633 &#8226; 3"</text>
+
+    <!-- 2. Stainless / Tin Ferrule Collar -->
+    <rect x="180" y="230" width="140" height="75" rx="3" fill="url(#tinFerrule)" stroke="#64748b" stroke-width="1.5"/>
+    
+    <!-- Ferrule Embossed Rib Lines & Nails -->
+    <line x1="180" y1="245" x2="320" y2="245" stroke="#475569" stroke-width="2"/>
+    <line x1="180" y1="285" x2="320" y2="285" stroke="#475569" stroke-width="2"/>
+    
+    <!-- Retaining Nails -->
+    <circle cx="205" cy="265" r="3.5" fill="#334155"/>
+    <circle cx="250" cy="265" r="3.5" fill="#334155"/>
+    <circle cx="295" cy="265" r="3.5" fill="#334155"/>
+
+    <!-- 3. Thick White Bristles (Bulu Kuas) -->
+    <!-- Main bristle block -->
+    <path d="M 180 305 L 180 405 Q 250 415 320 405 L 320 305 Z" fill="url(#bristlesGrad)" stroke="#94a3b8" stroke-width="1.5"/>
+
+    <!-- Bristle Fine Hair Lines -->
+    <line x1="190" y1="305" x2="190" y2="403" stroke="#cbd5e1" stroke-width="1.5"/>
+    <line x1="205" y1="305" x2="203" y2="405" stroke="#cbd5e1" stroke-width="1.5"/>
+    <line x1="220" y1="305" x2="218" y2="408" stroke="#cbd5e1" stroke-width="1.5"/>
+    <line x1="235" y1="305" x2="235" y2="410" stroke="#cbd5e1" stroke-width="1.5"/>
+    <line x1="250" y1="305" x2="250" y2="411" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="265" y1="305" x2="265" y2="410" stroke="#cbd5e1" stroke-width="1.5"/>
+    <line x1="280" y1="305" x2="282" y2="408" stroke="#cbd5e1" stroke-width="1.5"/>
+    <line x1="295" y1="305" x2="297" y2="405" stroke="#cbd5e1" stroke-width="1.5"/>
+    <line x1="310" y1="305" x2="310" y2="403" stroke="#cbd5e1" stroke-width="1.5"/>
+
+    <!-- Wet Paint Tip (Blue Paint dipped tip effect) -->
+    <path d="M 180 380 Q 250 395 320 380 L 320 405 Q 250 415 180 405 Z" fill="#2563eb" opacity="0.85"/>
+  </g>
+
+  <!-- Top Spec Ribbon -->
+  <rect x="25" y="25" width="220" height="34" rx="8" fill="#ea580c"/>
+  <text x="135" y="47" font-family="'Arial', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">KUAS CAT ETERNA 3 INCH</text>
+
+  <!-- Quality Stamp -->
+  <g transform="translate(425, 70)">
+    <circle cx="0" cy="0" r="32" fill="#0f172a" stroke="#ffffff" stroke-width="2"/>
+    <text x="0" y="-8" font-family="'Arial Black', sans-serif" font-size="8" font-weight="900" fill="#ffffff" text-anchor="middle">BULU TEBAL</text>
+    <text x="0" y="7" font-family="'Arial Black', sans-serif" font-size="11" font-weight="900" fill="#facc15" text-anchor="middle">TIDAK RONTOK</text>
+    <text x="0" y="18" font-family="'Arial', sans-serif" font-size="7" font-weight="bold" fill="#38bdf8" text-anchor="middle">ORIGINAL</text>
+  </g>
+
+  <!-- Bottom Info -->
+  <rect x="130" y="450" width="240" height="24" rx="12" fill="#1e293b"/>
+  <text x="250" y="466" font-family="'Arial', sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">COCOK UNTUK CAT TEMBOK &amp; MINYAK</text>
+</svg>

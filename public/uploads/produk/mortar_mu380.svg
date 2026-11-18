@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="sackBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="25%" stop-color="#ffffff"/>
+      <stop offset="75%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <linearGradient id="muRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+    <filter id="sackShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="12" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect width="500" height="500" rx="20" fill="url(#bgGrad)"/>
+  <ellipse cx="250" cy="430" rx="145" ry="24" fill="#64748b" opacity="0.35" filter="blur(6px)"/>
+
+  <!-- Mortar Sack Standing -->
+  <g filter="url(#sackShadow)">
+    <!-- Sack Contour -->
+    <path d="M 150 120 Q 250 110 350 120 Q 365 260 350 400 Q 250 415 150 400 Q 135 260 150 120 Z" fill="url(#sackBody)" stroke="#94a3b8" stroke-width="2"/>
+
+    <!-- Top & Bottom Sewn Seams -->
+    <line x1="140" y1="120" x2="360" y2="120" stroke="#dc2626" stroke-width="5" stroke-dasharray="8,4"/>
+    <line x1="140" y1="400" x2="360" y2="400" stroke="#dc2626" stroke-width="5" stroke-dasharray="8,4"/>
+
+    <!-- Red Banner Header (MORTAR UTAMA) -->
+    <rect x="145" y="145" width="210" height="75" fill="url(#muRed)"/>
+    <text x="250" y="185" font-family="'Arial Black', Impact, sans-serif" font-size="34" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="3">MU-380</text>
+    <text x="250" y="208" font-family="'Arial', sans-serif" font-size="10" font-weight="bold" fill="#fef08a" text-anchor="middle" letter-spacing="1">PEREKAT BATA RINGAN</text>
+
+    <!-- Subtitle on white body -->
+    <text x="250" y="255" font-family="'Arial Black', sans-serif" font-size="16" font-weight="900" fill="#0f172a" text-anchor="middle">MORTAR UTAMA</text>
+    <text x="250" y="275" font-family="'Arial', sans-serif" font-size="11" font-weight="bold" fill="#64748b" text-anchor="middle">THINBED MORTAR</text>
+
+    <!-- Brick Graphic Icon -->
+    <rect x="210" y="295" width="80" height="30" rx="3" fill="#cbd5e1" stroke="#475569" stroke-width="2"/>
+    <line x1="250" y1="295" x2="250" y2="325" stroke="#475569" stroke-width="1.5"/>
+    <rect x="215" y="325" width="70" height="3" fill="#dc2626"/>
+
+    <!-- 40 KG Badge -->
+    <g transform="translate(305, 355)">
+      <circle cx="0" cy="0" r="22" fill="#0f172a" stroke="#ffffff" stroke-width="2"/>
+      <text x="0" y="-3" font-family="'Arial Black', sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">40</text>
+      <text x="0" y="10" font-family="'Arial Black', sans-serif" font-size="9" font-weight="bold" fill="#facc15" text-anchor="middle">KG</text>
+    </g>
+
+    <!-- Features Pill -->
+    <rect x="170" y="350" width="105" height="20" rx="10" fill="#15803d"/>
+    <text x="222" y="364" font-family="'Arial', sans-serif" font-size="8" font-weight="bold" fill="#ffffff" text-anchor="middle">DAYA REKAT TINGGI</text>
+
+    <!-- Fold Creases -->
+    <path d="M 148 180 Q 165 260 152 340" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+    <path d="M 352 180 Q 335 260 348 340" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+  </g>
+
+  <!-- Top Spec Ribbon -->
+  <rect x="25" y="25" width="240" height="34" rx="8" fill="#dc2626"/>
+  <text x="145" y="47" font-family="'Arial', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">MORTAR MU-380 40 KG</text>
+
+  <!-- Quality Stamp -->
+  <g transform="translate(425, 70)">
+    <circle cx="0" cy="0" r="32" fill="#0f172a" stroke="#ffffff" stroke-width="2"/>
+    <text x="0" y="-8" font-family="'Arial Black', sans-serif" font-size="8" font-weight="900" fill="#ffffff" text-anchor="middle">SEMEN PEREKAT</text>
+    <text x="0" y="7" font-family="'Arial Black', sans-serif" font-size="11" font-weight="900" fill="#facc15" text-anchor="middle">HEBEL</text>
+    <text x="0" y="18" font-family="'Arial', sans-serif" font-size="7" font-weight="bold" fill="#38bdf8" text-anchor="middle">TEBAL 3 MM</text>
+  </g>
+
+  <!-- Bottom Info -->
+  <rect x="130" y="450" width="240" height="24" rx="12" fill="#1e293b"/>
+  <text x="250" y="466" font-family="'Arial', sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">KHUSUS PASANG BATA RINGAN AAC</text>
+</svg>

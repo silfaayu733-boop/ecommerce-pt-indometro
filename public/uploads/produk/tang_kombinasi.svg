@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="steelJaw" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="35%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+    <linearGradient id="rubberOrange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="50%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+    <filter id="pliersShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="14" stdDeviation="10" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect width="500" height="500" rx="20" fill="url(#bgGrad)"/>
+  <circle cx="250" cy="260" r="170" fill="#ffffff" opacity="0.6"/>
+  <ellipse cx="250" cy="430" rx="130" ry="20" fill="#64748b" opacity="0.35" filter="blur(6px)"/>
+
+  <!-- Combination Pliers Standing Vertically -->
+  <g filter="url(#pliersShadow)">
+    <!-- Steel Jaws (Top Head) -->
+    <!-- Left Jaw -->
+    <path d="M 220 180 L 220 100 Q 235 80 248 80 L 248 180 Z" fill="url(#steelJaw)" stroke="#334155" stroke-width="2"/>
+    <!-- Right Jaw -->
+    <path d="M 252 180 L 252 80 Q 265 80 280 100 L 280 180 Z" fill="url(#steelJaw)" stroke="#334155" stroke-width="2"/>
+
+    <!-- Gripping Teeth Serrations on Jaws -->
+    <line x1="230" y1="95" x2="248" y2="95" stroke="#475569" stroke-width="2"/>
+    <line x1="230" y1="105" x2="248" y2="105" stroke="#475569" stroke-width="2"/>
+    <line x1="230" y1="115" x2="248" y2="115" stroke="#475569" stroke-width="2"/>
+    <line x1="252" y1="95" x2="270" y2="95" stroke="#475569" stroke-width="2"/>
+    <line x1="252" y1="105" x2="270" y2="105" stroke="#475569" stroke-width="2"/>
+    <line x1="252" y1="115" x2="270" y2="115" stroke="#475569" stroke-width="2"/>
+
+    <!-- Curved Pipe Grip Cavity in Middle of Jaws -->
+    <path d="M 248 125 Q 235 140 248 155" fill="none" stroke="#334155" stroke-width="3"/>
+    <path d="M 252 125 Q 265 140 252 155" fill="none" stroke="#334155" stroke-width="3"/>
+
+    <!-- Center Pivot Fulcrum / Hinge Rivet -->
+    <circle cx="250" cy="190" r="22" fill="url(#steelJaw)" stroke="#1e293b" stroke-width="2"/>
+    <circle cx="250" cy="190" r="10" fill="#475569"/>
+    <circle cx="250" cy="190" r="4" fill="#94a3b8"/>
+
+    <!-- Handles (Left & Right) with Heavy Duty Ergonomic Rubber Grips -->
+    <!-- Left Handle Steel Core & Rubber Sleeve -->
+    <path d="M 235 205 Q 180 260 170 380 Q 170 410 190 410 Q 205 410 215 380 Q 230 280 245 205 Z" fill="url(#rubberOrange)" stroke="#9a3412" stroke-width="2"/>
+    <path d="M 180 270 Q 170 340 185 390" stroke="#0f172a" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Right Handle Steel Core & Rubber Sleeve -->
+    <path d="M 265 205 Q 320 260 330 380 Q 330 410 310 410 Q 295 410 285 380 Q 270 280 255 205 Z" fill="url(#rubberOrange)" stroke="#9a3412" stroke-width="2"/>
+    <path d="M 320 270 Q 330 340 315 390" stroke="#0f172a" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Brand Typography on Rubber Handle -->
+    <text x="250" y="245" font-family="'Arial Black', Impact, sans-serif" font-size="12" font-weight="900" fill="#0f172a" text-anchor="middle">CR-V 8"</text>
+    <text x="250" y="260" font-family="'Arial', sans-serif" font-size="8" font-weight="bold" fill="#7c2d12" text-anchor="middle">HEAVY DUTY</text>
+  </g>
+
+  <!-- Top Spec Ribbon -->
+  <rect x="25" y="25" width="220" height="34" rx="8" fill="#c2410c"/>
+  <text x="135" y="47" font-family="'Arial', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">TANG KOMBINASI 8 INCH</text>
+
+  <!-- Quality Stamp -->
+  <g transform="translate(425, 70)">
+    <circle cx="0" cy="0" r="32" fill="#0f172a" stroke="#ffffff" stroke-width="2"/>
+    <text x="0" y="-8" font-family="'Arial Black', sans-serif" font-size="8" font-weight="900" fill="#ffffff" text-anchor="middle">BAJA CR-V</text>
+    <text x="0" y="7" font-family="'Arial Black', sans-serif" font-size="12" font-weight="900" fill="#facc15" text-anchor="middle">8 INCH</text>
+    <text x="0" y="18" font-family="'Arial', sans-serif" font-size="7" font-weight="bold" fill="#38bdf8" text-anchor="middle">POTONG KAWAT</text>
+  </g>
+
+  <!-- Bottom Info -->
+  <rect x="130" y="450" width="240" height="24" rx="12" fill="#1e293b"/>
+  <text x="250" y="466" font-family="'Arial', sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">GAGANG KARET TPR &#8226; KUAT &amp; ANTI SLIP</text>
+</svg>
